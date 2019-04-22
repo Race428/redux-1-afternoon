@@ -44,7 +44,8 @@ function reducer(state = initialState, action) {
         ingredients,
         instructions,
       } = state 
-
+  
+      
       const recipe = { name,
         category,
         authorFirst,
@@ -53,7 +54,7 @@ function reducer(state = initialState, action) {
         instructions,}
 
       const newRecipes = [...state.recipes, recipe]
-      return { ...state, recipes: newRecipes}
+      return { ...state, recipes: newRecipes, name: '', category:'',authorFirst:'', authorLast:'',ingredients:[], instructions:[]}
     default: 
       return state;
   }
